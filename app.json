@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/document/document",
+    "pages/customer/customer",
+    "pages/statistics/statistics",
+    "pages/logs/logs",
+    "pages/customerdetail/customerdetail",
+    "pages/communication/communication",
+    "pages/personCenter/personCenter"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#03a5ef",
+    "navigationBarTitleText": "房金所CRM",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#92969c",
+    "selectedColor": "#03a5ef",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7fa",
+    "list": [{
+      "pagePath": "pages/customer/customer",
+      "iconPath": "image/icon_home.png",
+      "selectedIconPath": "image/icon_home_HL.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/document/document",
+      "iconPath": "image/icon_API.png",
+      "selectedIconPath": "image/icon_API_HL.png",
+      "text": "产品"
+    }, {
+      "pagePath": "pages/statistics/statistics",
+      "iconPath": "image/icon_data.png",
+      "selectedIconPath": "image/icon_data_HL.png",
+      "text": "数据统计"
+    }, {
+      "pagePath": "pages/personCenter/personCenter",
+      "iconPath": "image/icon_component.png",
+      "selectedIconPath": "image/icon_component_HL.png",
+      "text": "个人中心"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true
+}

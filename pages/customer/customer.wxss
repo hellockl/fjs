@@ -1,0 +1,76 @@
+/* pages/customer/customer.wxss */
+page{
+  background:#f0f0f0;
+  font-family: "Microsoft YaHei";
+  
+}
+.container{padding:0;}
+.contain{
+    padding-top:60px;
+}
+.contain-item{
+    border-bottom:#efeff4 solid 1px;
+    padding:10px 15px;   
+    line-height:18px;
+    font-size:11pt;
+    color:#000;
+    overflow: hidden;
+    background:#fff;
+}
+.contain-item .name{
+    display: flex;
+}
+.contain-item .name text{
+    flex: 1;
+}
+.contain-item .name .fr{
+    text-align: right;
+    color:#888;
+}
+.contain-item .number{
+   
+    color:#888;
+    font-size:10pt;
+}
+.section{
+    display: flex;
+    padding:15px 0;
+    background:#fff;
+    border-bottom:#e9e9e9 solid 1px;
+}
+.section .item{
+    padding:0 5px 0 15px;
+    flex:4;
+}
+.section .btn-area{
+    flex: 1;
+    padding:0 10px 0 0;
+}
+.section input{
+  
+  padding:0 15px;
+  height:30px;
+  font-size:11pt;
+  background:#f6f6f6;
+  border:#e9e9e9 solid 1px;
+  color:#000;
+  border-radius: 15px;
+  font-family:"Microsoft YaHei";
+}
+.btn-submit{
+    
+    height:32px;
+    line-height: 32px;
+    width:60px;
+    border-radius: 15px;
+  background:#03a5ef;
+  color:#fff;
+  font-size:11pt;
+}
+.form{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 22;
+}

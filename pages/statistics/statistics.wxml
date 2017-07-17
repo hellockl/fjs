@@ -1,0 +1,26 @@
+<view class="contain">
+  <view class="contain-item">
+    <view class="name">今日分配客户数 / 历史总数</view>
+    <view class="number">{{current_data.assigns}} / {{history_data.assigns}} </view>
+  </view>
+  <view class="contain-item">
+    <view class="name">今日领取客户数 / 历史总数</view>
+    <view class="number">{{current_data.get_customers}} / {{history_data.get_customers}}</view>
+  </view>
+  <view class="contain-item">
+    <view class="name">今日沟通客户数 / 历史总数</view>
+    <view class="number">{{current_data.communication_customers}} / {{history_data.communication_customers}}</view>
+  </view>
+  <view class="contain-item">
+    <view class="name">今日沟通次数 / 历史总数</view>
+    <view class="number">{{current_data.communication_count}} / {{history_data.communication_count}}</view>
+  </view>
+  <view class="contain-item">
+    <view class="name">今日分配沟通客户数 / 历史总数</view>
+    <view class="number">{{current_data.assign_and_communication_customers}} / {{history_data.assign_and_communication_customers}}</view>
+  </view>
+  <view class="contain-item">
+    <view class="name">今日领取沟通客户数 / 历史总数</view>
+    <view class="number">{{current_data.get_and_communication_customers}} / {{history_data.get_and_communication_customers}}</view>
+  </view>
+</view>

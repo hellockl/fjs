@@ -1,0 +1,63 @@
+
+<!--pages/document/document.wxml-->
+<toast hidden="{{hiddenToast}}" duration="2000" bindchange="toastHidden">{{errMsg}}</toast>
+<modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">
+  <view> 请选择类别！！ </view>
+</modal>
+<modal class="modal" hidden="{{modalHidden3}}" no-cancel bindconfirm="modalChange3" bindcancel="modalChange3">
+  <view>{{errMsg}}</view>
+</modal>
+<form bindsubmit="checkMobileDocument">
+  <view class="section section-search">
+    <view class="item"><input name="phone" value="{{phone}}" placeholder="请输入手机号" /></view>
+    <view class="item btn-area">
+      <button formType="submit" class="btn-submit">搜索</button>
+    </view>
+  </view>
+</form>
+<view class="font">
+  <text>1、请在证件的正上方拍摄，勿在斜侧方拍摄。</text>
+  <text>2、证件样例可参考以下示例。</text>
+  <text>3、由于各地的证照版本可能存在不一致的情况，以当地实际情况为准。</text>
+</view>
+<block wx:if="{{listShow}}">
+  <view class="body">
+    <view class="widgets">
+      <block wx:for-items="{{list}}" wx:key="v">
+        <view class="widgets__item">
+          <view id="{{item.id}}" class="widgets__info {{item.open ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle">
+            <text class="widgets__info-name">{{item.name}}</text>
+            <image class="widgets__info-img" src="/image/arrowright.png" mode="aspectFill" />
+          </view>
+          <view class="widgets__list {{item.open ? 'widgets__list_show' : ''}}">
+            <block wx:for="{{item.userDocument}}" wx:key="vv" wx:for-item="doc">
+              <image src="{{doc.document_path}}" class="images-image" data-src="{{doc.document_path}}"  bindtap="previewImage"></image>
+            </block>
+            <block wx:for="{{item.tempFilePaths}}" wx:key="vv" wx:for-item="image">
+              <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+            </block>
+            <view class="section">
+              <view class="images-text">请选择类别</view>
+              <picker mode="selector" id="{{item.id}}" bindchange="bindPickerChange" value="{{item.index}}" range-key="name" range="{{item.category}}">
+                <view class="picker">
+                  当前分类：{{item.category[item.index].name}}
+                </view>
+              </picker>
+            </view>
+            <view class="images-wrapper">
+              <text class="images-text">请选择图片</text>
+              <view class="images-list">
+                <block wx:if="{{item.show}}">
+                  <view class="images-image image-plus add_show" id="{{item.id}}" bindtap="chooseimage">
+                    <view class="image-plus-horizontal"></view>
+                    <view class="image-plus-vertical"></view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,17 @@
+/* pages/personCenter/personCenter.wxss */
+page{
+    background:#fff;
+    font-family: "Microsoft YaHei"
+}
+view{
+    font-size:12pt;
+    text-align: center;
+    padding:40% 0 0 0;
+    
+}
+page .btn{
+  margin:55% 15px 15px 15px;
+  background-color:#03a5ef;
+  color:#fff;
+  font-size:13pt;
+}

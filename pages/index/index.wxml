@@ -1,0 +1,19 @@
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">姓名</view>
+    <input name="name" placeholder="输入姓名" />
+  </view>
+  <view class="section">
+    <view class="section__title">密码</view>
+    <input type="password" name="password" placeholder="输入密码" />
+  </view>
+
+  <view class="btn-area">
+    <button formType="submit" class="btn-submit">立即登录</button>
+    <button formType="reset" class="btn-reset">重 置</button>
+  </view>
+</form>
+<modal class="modal" hidden="{{modalHidden3}}" no-cancel bindconfirm="modalChange3" bindcancel="modalChange3">
+  <view>{{errMsg}}</view>
+</modal>

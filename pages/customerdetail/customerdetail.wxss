@@ -1,0 +1,40 @@
+/* pages/customerdetail/customerdetail.wxss */
+page{
+  background:#f0f0f0;
+  font-family: "Microsoft YaHei";
+  
+}
+view{
+    border-bottom:#e1e1e1 solid 1px;
+    padding:10px 15px;
+    line-height:20px;
+    font-size:11pt;
+    color:#000;
+    overflow:hidden;
+    background:#fff;
+}
+text{
+    color:#666;
+}
+.btn-box{
+    padding:15px;
+}
+.btn-box button{
+    font-size:11pt;
+}
+.font{
+    display: block;
+    color:#000;
+}
+.add-list{
+    color:#666;
+}
+.btn-phone{
+    padding:5px;
+    margin-left:15px;
+    display: inline-block;
+    background:#f0f0f0;
+    border:#ddd solid 1px;
+    font-size:10pt;
+    border-radius: 5px;
+}

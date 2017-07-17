@@ -1,0 +1,24 @@
+/* pages/customer/customer.wxss */
+page{
+  background:#f0f0f0;
+  font-family: "Microsoft YaHei";
+  
+}
+.container{padding:0;}
+.contain-item{
+    border-bottom:#f0f0f0 solid 1px;
+    padding:10px 15px;   
+    line-height:18px;
+    font-size:11pt;
+    color:#000;
+    overflow: hidden;
+    background:#fff;
+}
+.contain-item .name{
+   
+}
+.contain-item .number{
+   
+    color:#888;
+    font-size:10pt;
+}

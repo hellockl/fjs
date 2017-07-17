@@ -1,0 +1,34 @@
+<form bindsubmit="checkCustomer" class="form">
+  <view class="section">
+    <view class="item"><input name="condition" placeholder="请输入条件" /></view>
+    <view class="item btn-area">
+      <button formType="submit" class="btn-submit">搜索</button>
+    </view>
+  </view>
+  
+</form>
+
+
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" lower-threshold="200" bindscrolltoupper="refresh">
+
+  <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="25"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+
+
+    <view class="contain">
+      <view wx:for="{{customerlist}}" bindtap="detail" id="{{item.customer_id}}" class="contain-item">
+        <view class="name">
+          <text>{{item.customer_name}}</text>
+          <text class="fr">{{item.telephonenumber}}</text>
+        </view>
+        <view class="number">{{item.receive_time}} </view>
+      </view>
+    </view>
+  </scroll-view>
+  
+
+
+<modal class="modal" hidden="{{modalHidden3}}" no-cancel bindconfirm="modalChange3" bindcancel="modalChange3">
+  <view>{{errMsg}}</view>
+</modal>

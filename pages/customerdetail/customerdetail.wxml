@@ -1,0 +1,50 @@
+<!--pages/customerdetail/customerdetail.wxml-->
+<view>
+  姓名：
+ <text>{{detail.customer_name}}</text>
+</view>
+<view>
+  手机号码：
+  <text>{{detail.telephonenumber}}</text>
+  <text bindtap="makePhoneCall" class="btn-phone">拨打电话</text>
+  <text bindtap="document" class="btn-phone">上传文件</text>
+</view>
+<view>
+  意向金额(万元)：
+  <text>{{detail.loan_amount}}</text>
+</view>
+<view>
+  分配时间：
+  <text>{{detail.first_fenpei_time}}</text>
+</view>
+<view>
+  有无房产：
+  <text>{{detail.house_status}}</text>
+</view>
+<view>
+  手机分类：
+  <text>{{detail.customer_name}}</text>
+</view>
+<view>
+  渠道来源：
+  <text>{{detail.customer_source}}</text>
+</view>
+<view>
+  客户地址：
+  <text>{{detail.customer_address}}</text>
+</view>
+<view>
+  房产地址：
+  <text>{{detail.house_location}}</text>
+</view>
+<view>
+  备注：
+  <text>{{detail.per_description}}</text>
+</view>
+<view class="btn-box">
+  <button bindtap="addcommunication" id="{{customer_id}}" class="btn" >添加沟通日志</button>
+</view>
+<view wx:for="{{detail.log}}" class="add-list">
+  <text>{{item.create_time}}  {{item.create_user_name}}</text>
+  <text class="font">{{index}}：{{item.content}} </text>
+</view>

@@ -1,0 +1,7 @@
+<view class="">
+  功能正在开发中，敬请期待！
+</view>
+<button type="default" bindtap="logout" class="btn"> 退出 </button>
+<modal class="modal" hidden="{{modalHidden3}}" no-cancel bindconfirm="modalChange3" bindcancel="modalChange3">
+  <view>{{errMsg}}</view>
+</modal>
